@@ -48,13 +48,24 @@ export function Booking() {
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
-    // Simulate API call
+    
+    const text = `*New Appointment Request*
+
+*Name:* ${values.name}
+*Phone:* ${values.phone}
+*Email:* ${values.email || 'N/A'}
+*Date:* ${values.date}
+*Time:* ${values.time}
+*Treatment:* ${values.treatment}
+*Message:* ${values.message || 'N/A'}`;
+    
+    const encodedText = encodeURIComponent(text);
+
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSuccess(true);
-      console.log(values);
-      // Here we would typically integrate with an email service or backend
-    }, 1500);
+      window.open(`https://wa.me/919394811911?text=${encodedText}`, '_blank');
+    }, 1000);
   }
 
   return (
@@ -205,9 +216,8 @@ export function Booking() {
                               {...field}
                             >
                               <option value="">Select Time</option>
-                              <option value="morning">Morning (9 AM - 12 PM)</option>
-                              <option value="afternoon">Afternoon (12 PM - 4 PM)</option>
-                              <option value="evening">Evening (4 PM - 8 PM)</option>
+                              <option value="morning">Morning (10 AM - 1 PM)</option>
+                              <option value="evening">Evening (6 PM - 9 PM)</option>
                             </select>
                           </FormControl>
                           <FormMessage />

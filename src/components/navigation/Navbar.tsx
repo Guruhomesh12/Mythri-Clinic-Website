@@ -46,8 +46,12 @@ export function Navbar() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <img src="/Logo.png" alt="Mythree Dental" className="h-12 w-auto group-hover:scale-105 transition-transform" />
+          <Link href="/" className="flex items-center gap-3 group">
+            <img src="/Logo.png" alt="Mythri Dental Clinic" className="h-16 md:h-20 w-auto group-hover:scale-105 transition-transform" />
+            <div className="hidden sm:flex flex-col">
+              <span className="font-heading font-bold text-2xl text-clinic-navy leading-none">Mythri</span>
+              <span className="font-medium text-xs text-clinic-teal tracking-widest uppercase mt-1">Dental Clinic</span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}

@@ -34,8 +34,14 @@ export function Footer() {
           
           {/* Clinic Info */}
           <div className="space-y-6">
-          <Link href="/" className="flex items-center gap-2 group cursor-pointer">
-            <img src="/Logo.png" alt="Mythree Dental" className="h-16 w-auto bg-white rounded p-1" />
+          <Link href="/" className="flex items-center gap-3 group cursor-pointer">
+            <div className="bg-white rounded p-1 inline-flex">
+              <img src="/Logo.png" alt="Mythri Dental Clinic Logo" className="h-16 md:h-20 w-auto" />
+            </div>
+            <div className="flex flex-col">
+              <span className="font-heading font-bold text-2xl text-white leading-none">Mythri</span>
+              <span className="font-medium text-xs text-clinic-teal tracking-widest uppercase mt-1">Dental Clinic</span>
+            </div>
           </Link>
             <p className="text-gray-400 text-sm leading-relaxed">
               Experience world-class dental care in a luxurious and comfortable environment. We combine advanced technology with a compassionate approach.

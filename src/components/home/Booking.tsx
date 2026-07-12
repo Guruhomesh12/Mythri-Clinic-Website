@@ -62,19 +62,32 @@ export function Booking() {
     const treatmentName = treatmentMap[values.treatment] || values.treatment;
     const timeName = values.time === 'morning' ? 'Morning (10 AM - 1 PM)' : values.time === 'evening' ? 'Evening (6 PM - 9 PM)' : values.time;
 
-    const text = `Hello Mythri Dental Clinic,
+    const messageParts = [
+      `Hello Mythri Dental Clinic \u{1F44B},`,
+      ``,
+      `I would like to request an appointment. Here are my details:`,
+      ``,
+      `\u{1F464} *Name:* ${values.name}`,
+      `\u{1F4DE} *Phone:* ${values.phone}`
+    ];
+    
+    if (values.email) {
+      messageParts.push(`\u{1F4E7} *Email:* ${values.email}`);
+    }
+    
+    messageParts.push(
+      `\u{1F5D3} *Preferred Date:* ${values.date}`,
+      `\u{23F0} *Preferred Time:* ${timeName}`,
+      `\u{1F9B7} *Treatment:* ${treatmentName}`
+    );
+    
+    if (values.message) {
+      messageParts.push(``, `\u{1F4DD} *Additional Message:* ${values.message}`);
+    }
+    
+    messageParts.push(``, `Looking forward to your confirmation! Thank you.`);
 
-I would like to request an appointment. Here are my details:
-
-*Name:* ${values.name}
-*Phone:* ${values.phone}
-${values.email ? `*Email:* ${values.email}\n` : ''}
-*Preferred Date:* ${values.date}
-*Preferred Time:* ${timeName}
-*Treatment:* ${treatmentName}
-${values.message ? `\n*Additional Message:* ${values.message}` : ''}
-
-Looking forward to your confirmation! Thank you.`;
+    const text = messageParts.join('\n');
     
     const encodedText = encodeURIComponent(text);
 

@@ -70,7 +70,7 @@ export function FAQ() {
             transition={{ duration: 0.6 }}
             className="lg:w-2/3 w-full"
           >
-            <Accordion type="single" className="w-full space-y-4">
+            <Accordion className="w-full space-y-4">
               {faqs.map((faq, index) => (
                 <AccordionItem 
                   key={index} 

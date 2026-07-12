@@ -64,31 +64,11 @@ export function Hero() {
             </div>
             
             {/* Trust Badges */}
-            <div className="flex items-center gap-6 pt-8 border-t border-gray-200 w-full">
-              <div className="flex -space-x-4">
-                {[
-                  "1534528741775-53994a69daeb",
-                  "1506794778202-cad84cf45f1d",
-                  "1494790108377-be9c29b29330",
-                  "1507003211169-0a1dd7228f2d"
-                ].map((id, i) => (
-                  <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-gray-200 overflow-hidden relative">
-                    <Image 
-                      src={`https://images.unsplash.com/photo-${id}?auto=format&fit=crop&q=80&w=100&h=100`} 
-                      alt="Happy patient"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                ))}
-                <div className="w-10 h-10 rounded-full border-2 border-white bg-clinic-teal text-white flex items-center justify-center text-xs font-bold z-10">
-                  +2k
-                </div>
-              </div>
+            <div className="flex items-center gap-4 pt-8 border-t border-gray-200 w-full">
               <div className="flex flex-col">
-                <div className="flex items-center gap-1 text-clinic-gold">
+                <div className="flex items-center gap-1 text-clinic-gold mb-1">
                   {[1, 2, 3, 4, 5].map((star) => (
-                    <Star key={star} className="w-4 h-4 fill-current" />
+                    <Star key={star} className="w-5 h-5 fill-current" />
                   ))}
                 </div>
                 <span className="text-sm font-medium text-gray-600">

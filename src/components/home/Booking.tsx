@@ -61,17 +61,17 @@ export function Booking() {
     const treatmentName = treatmentMap[values.treatment] || values.treatment;
     const timeName = values.time === 'morning' ? 'Morning (10 AM - 1 PM)' : values.time === 'evening' ? 'Evening (6 PM - 9 PM)' : values.time;
 
-    const text = `Hello Mythri Dental Clinic 👋,
+    const text = `Hello Mythri Dental Clinic,
 
 I would like to request an appointment. Here are my details:
 
-👤 *Name:* ${values.name}
-📞 *Phone:* ${values.phone}
-${values.email ? `📧 *Email:* ${values.email}\n` : ''}
-🗓 *Preferred Date:* ${values.date}
-⏰ *Preferred Time:* ${timeName}
-🦷 *Treatment:* ${treatmentName}
-${values.message ? `\n📝 *Additional Message:* ${values.message}` : ''}
+*Name:* ${values.name}
+*Phone:* ${values.phone}
+${values.email ? `*Email:* ${values.email}\n` : ''}
+*Preferred Date:* ${values.date}
+*Preferred Time:* ${timeName}
+*Treatment:* ${treatmentName}
+${values.message ? `\n*Additional Message:* ${values.message}` : ''}
 
 Looking forward to your confirmation! Thank you.`;
     

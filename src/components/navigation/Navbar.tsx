@@ -78,10 +78,10 @@ export function Navbar() {
               <PhoneCall className="w-4 h-4 text-clinic-teal" />
               <span>+91 93948 11911</span>
             </a>
-            <button className={buttonVariants({ className: "bg-clinic-teal hover:bg-clinic-teal/90 text-white rounded-full px-6 shadow-md shadow-clinic-teal/20 transition-all hover:shadow-lg" })}>
+            <Link href="/#booking" className={buttonVariants({ className: "bg-clinic-teal hover:bg-clinic-teal/90 text-white rounded-full px-6 shadow-md shadow-clinic-teal/20 transition-all hover:shadow-lg" })}>
               <CalendarPlus className="w-4 h-4 mr-2" />
               Book Appointment
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Menu */}
@@ -114,10 +114,10 @@ export function Navbar() {
                       <PhoneCall className="w-4 h-4 mr-2 text-clinic-teal" />
                       Call Us Now
                     </a>
-                    <button className={buttonVariants({ className: "w-full justify-start bg-clinic-teal hover:bg-clinic-teal/90 text-white shadow-md shadow-clinic-teal/20" })}>
+                    <Link href="/#booking" className={buttonVariants({ className: "w-full justify-start bg-clinic-teal hover:bg-clinic-teal/90 text-white shadow-md shadow-clinic-teal/20" })}>
                       <CalendarPlus className="w-4 h-4 mr-2" />
                       Book Appointment
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </SheetContent>

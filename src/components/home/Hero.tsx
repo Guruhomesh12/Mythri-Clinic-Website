@@ -66,10 +66,15 @@ export function Hero() {
             {/* Trust Badges */}
             <div className="flex items-center gap-6 pt-8 border-t border-gray-200 w-full">
               <div className="flex -space-x-4">
-                {[1, 2, 3, 4].map((i) => (
+                {[
+                  "1534528741775-53994a69daeb",
+                  "1506794778202-cad84cf45f1d",
+                  "1494790108377-be9c29b29330",
+                  "1507003211169-0a1dd7228f2d"
+                ].map((id, i) => (
                   <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-gray-200 overflow-hidden relative">
                     <Image 
-                      src={`https://images.unsplash.com/photo-${1500000000000 + i * 1000}?auto=format&fit=crop&q=80&w=100&h=100`} 
+                      src={`https://images.unsplash.com/photo-${id}?auto=format&fit=crop&q=80&w=100&h=100`} 
                       alt="Happy patient"
                       fill
                       className="object-cover"

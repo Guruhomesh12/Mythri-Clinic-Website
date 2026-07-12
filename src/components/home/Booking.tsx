@@ -49,15 +49,31 @@ export function Booking() {
   function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
     
-    const text = `*New Appointment Request*
+    const treatmentMap: Record<string, string> = {
+      'consultation': 'General Consultation',
+      'cleaning': 'Teeth Cleaning',
+      'root-canal': 'Root Canal',
+      'implants': 'Dental Implants',
+      'braces': 'Braces / Aligners',
+      'whitening': 'Teeth Whitening',
+      'other': 'Other'
+    };
+    const treatmentName = treatmentMap[values.treatment] || values.treatment;
+    const timeName = values.time === 'morning' ? 'Morning (10 AM - 1 PM)' : values.time === 'evening' ? 'Evening (6 PM - 9 PM)' : values.time;
 
-*Name:* ${values.name}
-*Phone:* ${values.phone}
-*Email:* ${values.email || 'N/A'}
-*Date:* ${values.date}
-*Time:* ${values.time}
-*Treatment:* ${values.treatment}
-*Message:* ${values.message || 'N/A'}`;
+    const text = `Hello Mythri Dental Clinic 👋,
+
+I would like to request an appointment. Here are my details:
+
+👤 *Name:* ${values.name}
+📞 *Phone:* ${values.phone}
+${values.email ? `📧 *Email:* ${values.email}\n` : ''}
+🗓 *Preferred Date:* ${values.date}
+⏰ *Preferred Time:* ${timeName}
+🦷 *Treatment:* ${treatmentName}
+${values.message ? `\n📝 *Additional Message:* ${values.message}` : ''}
+
+Looking forward to your confirmation! Thank you.`;
     
     const encodedText = encodeURIComponent(text);
 

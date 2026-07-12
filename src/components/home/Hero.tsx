@@ -8,8 +8,8 @@ import Link from "next/link";
 
 const stats = [
   { label: "Years Experience", value: "15+", icon: Stethoscope },
-  { label: "Happy Patients", value: "10k+", icon: Star },
-  { label: "Treatments Done", value: "25k+", icon: ShieldCheck },
+  { label: "Current Patients", value: "10k+", icon: Star },
+  { label: "Treatments Done", value: "55k+", icon: ShieldCheck },
 ];
 
 export function Hero() {

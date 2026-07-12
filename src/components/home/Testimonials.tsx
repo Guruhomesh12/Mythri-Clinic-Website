@@ -1,8 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Star, Quote } from "lucide-react";
-import Image from "next/image";
+import { Star, StarHalf, Quote } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
@@ -14,38 +13,34 @@ import {
 const testimonials = [
   {
     id: 1,
-    name: "Rahul Sharma",
-    role: "Software Engineer",
-    content: "The best dental experience I've ever had. Dr. Mythri is incredibly patient and explains every step of the procedure. The clinic feels more like a premium lounge than a hospital.",
-    rating: 5,
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=150&h=150",
+    name: "Rajesh Kumar",
+    role: "IT Professional",
+    content: "Visited Dr. Mythri for a root canal. I was very anxious, but she made the whole process completely painless. The clinic is very clean and the staff is super polite. Highly recommended for anyone in Hyderabad!",
+    rating: 4.9,
     source: "Google"
   },
   {
     id: 2,
-    name: "Priya Patel",
+    name: "Sneha Reddy",
     role: "Teacher",
-    content: "I was always terrified of dentists, but the painless root canal treatment here completely changed my perspective. Highly recommend their advanced and gentle approach.",
-    rating: 5,
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150&h=150",
+    content: "I had my smile designing done here. The results are phenomenal! The technology they use is top-notch and they took the time to explain everything to me in detail.",
+    rating: 4.8,
     source: "Google"
   },
   {
     id: 3,
-    name: "Karthik Reddy",
+    name: "Amit Desai",
     role: "Business Owner",
-    content: "Got my smile designing done here. The results are phenomenal! The technology they use is top-notch and the staff is extremely professional.",
-    rating: 5,
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150&h=150",
+    content: "Very clean and hygienic clinic. Took my 5-year-old son for his first checkup and Dr. Mythri handled him so beautifully. He actually looks forward to his next visit!",
+    rating: 4.9,
     source: "Practo"
   },
   {
     id: 4,
-    name: "Anita Desai",
+    name: "Priya Patel",
     role: "Homemaker",
-    content: "Very clean and hygienic clinic. Took my 5-year-old son for his first checkup and Dr. Mythri handled him so beautifully. He actually looks forward to his next visit!",
-    rating: 5,
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=150&h=150",
+    content: "The best dental experience I've ever had. Dr. Mythri is incredibly patient and the clinic feels more like a premium lounge than a hospital. Excellent service.",
+    rating: 4.7,
     source: "Google"
   }
 ];
@@ -92,10 +87,21 @@ export function Testimonials() {
                   <div className="bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-[2rem] h-full flex flex-col relative group hover:bg-white/10 transition-colors">
                     <Quote className="absolute top-8 right-8 w-12 h-12 text-white/5 group-hover:text-clinic-teal/20 transition-colors transform -scale-x-100" />
                     
-                    <div className="flex items-center gap-1 text-clinic-gold mb-6">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 fill-current" />
-                      ))}
+                    <div className="flex items-center gap-2 mb-6">
+                      <div className="flex items-center gap-1 text-clinic-gold">
+                        {[...Array(5)].map((_, i) => (
+                          <span key={i} className="flex">
+                            {i < Math.floor(testimonial.rating) ? (
+                              <Star className="w-5 h-5 fill-current" />
+                            ) : i < testimonial.rating ? (
+                              <StarHalf className="w-5 h-5 fill-current" />
+                            ) : (
+                              <Star className="w-5 h-5 text-gray-600" />
+                            )}
+                          </span>
+                        ))}
+                      </div>
+                      <span className="text-white font-semibold text-lg">{testimonial.rating}</span>
                     </div>
                     
                     <p className="text-gray-200 text-lg leading-relaxed mb-8 flex-grow">
@@ -103,15 +109,6 @@ export function Testimonials() {
                     </p>
                     
                     <div className="flex items-center gap-4 mt-auto">
-                      <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-white/20">
-                        <Image
-                          src={testimonial.image}
-                          alt={testimonial.name}
-                          width={56}
-                          height={56}
-                          className="object-cover"
-                        />
-                      </div>
                       <div>
                         <h4 className="font-bold text-white text-lg">{testimonial.name}</h4>
                         <div className="flex items-center gap-2">

@@ -47,17 +47,7 @@ export function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-xl bg-clinic-teal text-white flex items-center justify-center font-bold text-xl group-hover:scale-105 transition-transform">
-              MR
-            </div>
-            <div className="flex flex-col">
-              <span className="font-heading font-bold text-xl leading-tight text-clinic-navy dark:text-white">
-                Dr. Mythri Reddy
-              </span>
-              <span className="text-xs text-clinic-teal font-medium tracking-wider uppercase">
-                Dental Clinic
-              </span>
-            </div>
+            <img src="/Logo.png" alt="Mythree Dental" className="h-12 w-auto group-hover:scale-105 transition-transform" />
           </Link>
 
           {/* Desktop Navigation */}

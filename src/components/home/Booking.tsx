@@ -81,7 +81,9 @@ export function Booking() {
                 </div>
                 <div>
                   <h4 className="font-bold mb-1">Clinic Address</h4>
-                  <p className="text-gray-300 text-sm">123 Premium Care Ave, Health District, City - 500000</p>
+                  <a href="https://maps.app.goo.gl/cWKwDJbqdLAQWxD26" target="_blank" rel="noopener noreferrer" className="text-gray-300 text-sm hover:text-white transition-colors">
+                    Mythri dental clinic, 6-158, sudarshan reddy nagar, Market road, Chinthal, Quthbullapur, Hyderabad, Telangana 500054
+                  </a>
                 </div>
               </div>
               <div className="flex items-start gap-4">

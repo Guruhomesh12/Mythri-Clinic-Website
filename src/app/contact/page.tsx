@@ -36,11 +36,11 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-xl text-clinic-navy mb-2">Visit Us</h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      123 Premium Care Avenue,<br />
-                      Health District, City - 500000<br />
-                      Landmark: Near Central Park
-                    </p>
+                    <a href="https://maps.app.goo.gl/cWKwDJbqdLAQWxD26" target="_blank" rel="noopener noreferrer" className="text-gray-600 leading-relaxed hover:text-clinic-teal transition-colors block">
+                      Mythri dental clinic,<br />
+                      6-158, sudarshan reddy nagar, Market road,<br />
+                      Chinthal, Quthbullapur, Hyderabad, Telangana 500054
+                    </a>
                   </div>
                 </div>
 
@@ -49,11 +49,16 @@ export default function ContactPage() {
                     <Phone className="w-6 h-6 text-clinic-teal" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-xl text-clinic-navy mb-2">Call Us</h3>
-                    <p className="text-gray-600 mb-1">For appointments & emergencies:</p>
-                    <a href="tel:+919394811911" className="text-lg font-bold text-clinic-teal hover:text-clinic-navy transition-colors">
-                      +91 93948 11911
-                    </a>
+                    <h3 className="font-bold text-xl text-clinic-navy mb-2">Call or WhatsApp Us</h3>
+                    <p className="text-gray-600 mb-2">For appointments & emergencies:</p>
+                    <div className="flex flex-col gap-2">
+                      <a href="tel:+919394811911" className="text-lg font-bold text-clinic-teal hover:text-clinic-navy transition-colors">
+                        +91 93948 11911
+                      </a>
+                      <a href="https://wa.me/919394811911" target="_blank" rel="noopener noreferrer" className="text-md font-bold text-[#25D366] hover:text-[#128C7E] transition-colors flex items-center gap-1">
+                        Chat on WhatsApp
+                      </a>
+                    </div>
                   </div>
                 </div>
 

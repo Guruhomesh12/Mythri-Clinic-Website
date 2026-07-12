@@ -34,19 +34,9 @@ export function Footer() {
           
           {/* Clinic Info */}
           <div className="space-y-6">
-            <div className="flex items-center gap-2 group cursor-pointer">
-              <div className="w-10 h-10 rounded-xl bg-clinic-teal text-white flex items-center justify-center font-bold text-xl">
-                MR
-              </div>
-              <div className="flex flex-col">
-                <span className="font-heading font-bold text-xl leading-tight text-white">
-                  Dr. Mythri Reddy
-                </span>
-                <span className="text-xs text-clinic-teal font-medium tracking-wider uppercase">
-                  Dental Clinic
-                </span>
-              </div>
-            </div>
+          <Link href="/" className="flex items-center gap-2 group cursor-pointer">
+            <img src="/Logo.png" alt="Mythree Dental" className="h-16 w-auto bg-white rounded p-1" />
+          </Link>
             <p className="text-gray-400 text-sm leading-relaxed">
               Experience world-class dental care in a luxurious and comfortable environment. We combine advanced technology with a compassionate approach.
             </p>
@@ -111,10 +101,11 @@ export function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-clinic-teal shrink-0 mt-0.5" />
-                <span className="text-gray-400 text-sm">
-                  123 Premium Care Avenue,<br />
-                  Health District, City - 500000
-                </span>
+                <a href="https://maps.app.goo.gl/cWKwDJbqdLAQWxD26" target="_blank" rel="noopener noreferrer" className="text-gray-400 text-sm hover:text-clinic-teal transition-colors">
+                  Mythri dental clinic,<br />
+                  6-158, sudarshan reddy nagar, Market road,<br />
+                  Chinthal, Quthbullapur, Hyderabad, Telangana 500054
+                </a>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-clinic-teal shrink-0" />

@@ -38,7 +38,7 @@ export function Booking() {
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
-      phone: "",
+      phone: "+91 ",
       email: "",
       date: "",
       time: "",
@@ -185,7 +185,7 @@ export function Booking() {
                         <FormItem>
                           <FormLabel className="text-clinic-navy font-semibold">Full Name *</FormLabel>
                           <FormControl>
-                            <Input placeholder="John Doe" className="bg-gray-50/50 h-12 rounded-xl" {...field} />
+                            <Input placeholder="e.g. Rahul Sharma" className="bg-gray-50/50 h-12 rounded-xl focus:placeholder-transparent transition-all" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -198,7 +198,7 @@ export function Booking() {
                         <FormItem>
                           <FormLabel className="text-clinic-navy font-semibold">Phone Number *</FormLabel>
                           <FormControl>
-                            <Input placeholder="+91 90000 00000" className="bg-gray-50/50 h-12 rounded-xl" {...field} />
+                            <Input className="bg-gray-50/50 h-12 rounded-xl focus:placeholder-transparent transition-all" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -213,7 +213,7 @@ export function Booking() {
                       <FormItem>
                         <FormLabel className="text-clinic-navy font-semibold">Email Address (Optional)</FormLabel>
                         <FormControl>
-                          <Input placeholder="john@example.com" className="bg-gray-50/50 h-12 rounded-xl" {...field} />
+                          <Input placeholder="rahul@example.com" className="bg-gray-50/50 h-12 rounded-xl focus:placeholder-transparent transition-all" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -291,7 +291,7 @@ export function Booking() {
                         <FormControl>
                           <Textarea 
                             placeholder="Briefly describe your dental issue or any specific requirements..." 
-                            className="bg-gray-50/50 rounded-xl resize-none min-h-[100px]" 
+                            className="bg-gray-50/50 rounded-xl resize-none min-h-[100px] focus:placeholder-transparent transition-all" 
                             {...field} 
                           />
                         </FormControl>
